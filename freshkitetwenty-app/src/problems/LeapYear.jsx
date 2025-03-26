@@ -38,8 +38,8 @@ const LeapYear = () => {
 
   return (
     <div className="container bg-neutral-700 text-white rounded-2xl p-5 max-w-[400px] text-center">
-      <h1 className="text-lg font-bold">Leap year Checker</h1>
-      <p className="mb-2 text-neutral-300">Enter a year and see check if it's a leap year.</p>
+      <h1 className="text-xl font-bold">Leap year Checker</h1>
+      <p className="mb-2 mt-2 text-neutral-300">Enter a year and see check if it's a leap year.</p>
 
       <input
         className="w-full border border-gray-400 p-2 rounded-md text-center"

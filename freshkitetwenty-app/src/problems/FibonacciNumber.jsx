@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { sumOfDigits } from 'freshkitetwenty';
+import { fibonacciNumber } from 'freshkitetwenty';
 
-const SumOfDigits = () => {
+const FibonacciNumber = () => {
 
     const [number, setNumber] = useState('');
     const [displayAnswer, setDisplayAnswer] = useState('');
@@ -26,19 +26,16 @@ const SumOfDigits = () => {
             return;
         }
 
-        //Sum of the digits
+        // Calculate and display the Fibonacci number.
         setDisplayAnswer((() => {
-            if (num < 0) {
-                return 'Invalid input. Please enter a positive number.';
-            }
-            return `Sum of the digits is ${sumOfDigits(num)}`;
+            return `Fibonacci of ${num} is ${fibonacciNumber(num)}`
         }));
     };
 
     return (
         <div className="container bg-neutral-700 text-white rounded-2xl p-5 max-w-[400px] text-center">
-            <h1 className="text-xl font-bold">Sum of Digits</h1>
-            <p className="mb-2 mt-2 text-neutral-300">Enter a number to find the sum of digits</p>
+            <h1 className="text-xl font-bold">Fibonacci Number</h1>
+            <p className="mb-2 mt-2 text-neutral-300">Enter a number and find it's fibonacci.</p>
 
             <input
                 className="w-full border border-gray-400 p-2 rounded-md text-center"
@@ -59,4 +56,4 @@ const SumOfDigits = () => {
     );
 };
 
-export default SumOfDigits;
+export default FibonacciNumber;

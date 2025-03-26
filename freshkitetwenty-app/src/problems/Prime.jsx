@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { sumOfDigits } from 'freshkitetwenty';
+import { isPrime } from 'freshkitetwenty';
 
-const SumOfDigits = () => {
+const Prime = () => {
 
     const [number, setNumber] = useState('');
     const [displayAnswer, setDisplayAnswer] = useState('');
@@ -26,19 +26,21 @@ const SumOfDigits = () => {
             return;
         }
 
-        //Sum of the digits
+
+        // Check if the number is prime or not. Display the result accordingly.
         setDisplayAnswer((() => {
-            if (num < 0) {
-                return 'Invalid input. Please enter a positive number.';
+            if (num <= 1) {
+                return `${num} is not prime.`;
             }
-            return `Sum of the digits is ${sumOfDigits(num)}`;
+            return `${num} is ${isPrime(num) ? 'prime number' : 'not prime number'}`;
+
         }));
     };
 
     return (
         <div className="container bg-neutral-700 text-white rounded-2xl p-5 max-w-[400px] text-center">
-            <h1 className="text-xl font-bold">Sum of Digits</h1>
-            <p className="mb-2 mt-2 text-neutral-300">Enter a number to find the sum of digits</p>
+            <h1 className="text-xl font-bold">Prime Number</h1>
+            <p className="mb-2 mt-2 text-neutral-300">Enter a number and check if it's a prime number.</p>
 
             <input
                 className="w-full border border-gray-400 p-2 rounded-md text-center"
@@ -51,7 +53,7 @@ const SumOfDigits = () => {
                 className="bg-gradient-to-r from-purple-600 to-orange-600 text-white font-semibold rounded-md p-2 mt-4 w-full"
                 onClick={handleAnswer}
             >
-                Find
+                Check
             </button>
 
             {displayAnswer && <p className="text-green-600 font-bold mt-2">{displayAnswer}</p>}
@@ -59,4 +61,4 @@ const SumOfDigits = () => {
     );
 };
 
-export default SumOfDigits;
+export default Prime;

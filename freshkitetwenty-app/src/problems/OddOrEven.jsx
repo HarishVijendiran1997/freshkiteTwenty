@@ -32,8 +32,8 @@ const IsOddOrEven = () => {
 
   return (
     <div className="container bg-neutral-700 text-white rounded-2xl p-5 max-w-[400px] text-center">
-      <h1 className="text-lg font-bold">Odd or Even Checker</h1>
-      <p className="mb-2 text-neutral-300">Enter a number and see if it's odd or even.</p>
+      <h1 className="text-xl font-bold">Odd or Even Checker</h1>
+      <p className="mb-2 mt-2 text-neutral-300">Enter a number and see if it's odd or even.</p>
 
       <input
         className="w-full border border-gray-400 p-2 rounded-md text-center"

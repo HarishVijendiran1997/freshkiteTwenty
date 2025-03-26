@@ -33,8 +33,8 @@ const SwapTwoVariables = () => {
 
   return (
     <div className="container bg-neutral-700 text-white rounded-2xl p-5 max-w-full text-center">
-      <h1 className="text-lg font-bold">Swap Two Variables</h1>
-      <p className="mb-2 text-gray-300">Enter two numbers to swap their values.</p>
+      <h1 className="text-xl font-bold">Swap Two Variables</h1>
+      <p className="mb-2 mt-2 text-gray-300">Enter two numbers to swap their values.</p>
 
       <label className=" font-bold mt-2">A</label>
       <input

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { sumOfDigits } from 'freshkitetwenty';
+import { factorial } from 'freshkitetwenty';
 
-const SumOfDigits = () => {
+const Factorial = () => {
 
     const [number, setNumber] = useState('');
     const [displayAnswer, setDisplayAnswer] = useState('');
@@ -26,19 +26,23 @@ const SumOfDigits = () => {
             return;
         }
 
-        //Sum of the digits
+        // Calculate the factorial of the number.
         setDisplayAnswer((() => {
             if (num < 0) {
                 return 'Invalid input. Please enter a positive number.';
             }
-            return `Sum of the digits is ${sumOfDigits(num)}`;
+            else if (num === 0 || num === 1) {
+                return `${num}! equals 1`;
+            } else {
+                return `${num}! equals ${factorial(num)}`;
+            }
         }));
     };
 
     return (
         <div className="container bg-neutral-700 text-white rounded-2xl p-5 max-w-[400px] text-center">
-            <h1 className="text-xl font-bold">Sum of Digits</h1>
-            <p className="mb-2 mt-2 text-neutral-300">Enter a number to find the sum of digits</p>
+            <h1 className="text-xl font-bold">Factorial</h1>
+            <p className="mb-2 mt-2 text-neutral-300">Enter a number and find it's factorial.</p>
 
             <input
                 className="w-full border border-gray-400 p-2 rounded-md text-center"
@@ -59,4 +63,4 @@ const SumOfDigits = () => {
     );
 };
 
-export default SumOfDigits;
+export default Factorial;
